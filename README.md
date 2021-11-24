@@ -62,12 +62,15 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Checked the route to create existed with rails routes
+  added a byebug to the create methof inside the Toys controller
+  Server logs said "Toys" was an unititialized contant
+  Changed to "Toy" fixed the bug
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: Console said my frontend was expecting JSON and my backend wasn't returning JSON. Added a render json: to the last line of the update method in the toys controller
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Checked to see if the destroy route existed with rails routes. It did not, so I added it to the routes.rb file
